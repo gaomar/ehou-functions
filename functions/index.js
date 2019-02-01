@@ -66,13 +66,13 @@ exports.handler = function (event, context, callback) {
 
                 switch (num) {
                     case 2: case 7: 
-                        wk = "ほくほくせい"; name = "北北西"; typeNo = 1; break;                        
+                        wk = "北北西"; break;
                     case 4: case 9:
-                        wk = "とうほくとう"; name = "東北東"; typeNo = 2; break;
+                        wk = "東北東"; break;
                     case 1: case 3: case 6: case 8:
-                        wk = "なんなんとう"; name = "南南東"; typeNo = 3; break;
+                        wk = "南南東"; break;
                     default:
-                        wk = "せいなんせい"; name = "西南西"; typeNo = 4; break;
+                        wk = "西南西"; break;
                 }
 
                 speechText = myYear + "年は、" + wk + "です。他に知りたい年はありますか？";  
