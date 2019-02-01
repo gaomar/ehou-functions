@@ -164,7 +164,7 @@ function responseCall(speechText, endFlg, response, callback) {
 ![s102](images/s102.png)
 
 ## Githubと連携する
-GitHubと連携するのｄ、［GitHub］ボタンをクリックします。
+GitHubと連携するので、［GitHub］ボタンをクリックします。
 
 ![s103](images/s103.png)
 
@@ -189,7 +189,8 @@ Functionsがあるフォルダを指定します。
 
 ![s108](images/s108.png)
 
-［Functions］タブをクリックします。作成したjavascriptファイルをクリックします。今回の場合だと`index.js`をクリックします。
+［Functions］タブをクリックします。作成したjavascriptファイルをクリックします。  
+今回の場合だと`index.js`をクリックします。
 
 ![s109](images/s109.png)
 
@@ -208,7 +209,7 @@ Clovaデベロッパーセンターのサーバー設定で先程コピーした
 ![s112](images/s112.png)
 
 ## テストする
-シミュレーターでテストしてみます。「今年は」と入力すると、今年の恵方がわかります。
+シミュレーターでテストしてみます。「今年は」と入力すると、今年の恵方がわかります。
 
 ![s113](images/s113.png)
 
