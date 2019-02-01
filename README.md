@@ -15,20 +15,33 @@ https://www.netlify.com/pricing/#addons
 
 ![s100](images/s100.png)
 
-# git環境を用意する
-githubに環境を用意しましょう
+# GitHubにリポジトリを作成する
+GitHubにリポジトリを作成します。
+
+![s101](images/s101.png)
+
+
+# ローカルPCにgit環境を整える
+ローカルPCにgit環境を整えます。
 
 ```
 $ mkdir ehou-functions
 $ cd ehou-functions
 $ git init
 $ git commit -m '初回コミット' --allow-empty
-$ git remote add origin {githubのURL}
+$ git remote add origin {GitHubのリポジトリURL}
 $ git push -u origin master
 ```
 
 # Clova関数を作成しよう
 `functions`フォルダを作成してそこにプログラムファイルを作成します。
+
+```
+$ mkdir functions
+$ cd functions
+```
+
+`index.js`ファイルを新規作成します。
 
 ```javascript:functions/index.js
 'use strict';
@@ -142,3 +155,66 @@ function responseCall(speechText, endFlg, response, callback) {
     
 }
 ```
+
+# Netlify環境構築
+[Netlify](https://www.netlify.com/)にアクセスして、サインインしてください。
+
+［New site from Git］ボタンをクリックします。
+
+![s102](images/s102.png)
+
+## Githubと連携する
+GitHubと連携するのｄ、［GitHub］ボタンをクリックします。
+
+![s103](images/s103.png)
+
+GitHubの画面が表示されるので、［Add another organization］をクリックしてください。
+
+![s104](images/s104.png)
+
+対象のリポジトリを選択します。
+
+![s105](images/s105.png)
+
+リポジトリを選択するとNetlifyの画面に戻り、対象のリポジトリをクリックします。
+
+![s106](images/s106.png)
+
+そのまま［Deploy site］をクリックします。
+
+![s107](images/s107.png)
+
+［Settings］をクリックして、左メニューから`Functions`をクリックします。  
+Functionsがあるフォルダを指定します。
+
+![s108](images/s108.png)
+
+［Functions］タブをクリックします。作成したjavascriptファイルをクリックします。今回の場合だと`index.js`をクリックします。
+
+![s109](images/s109.png)
+
+エンドポイントURLが表示されるので、コピーしておきます。
+
+![s110](images/s110.png)
+
+# Clovaのエンドポイントを設定する
+Clovaデベロッパーセンターのサーバー設定で先程コピーしたURLを指定します。
+
+![s111](images/s111.png)
+
+## Extensions Kitの設定
+今回のスキルでは`MainIntent`を作成しました。西暦を取得するためのビルトインスロットタイプを指定します。
+
+![s112](images/s112.png)
+
+## テストする
+シミュレーターでテストしてみます。「今年は」と入力すると、今年の恵方がわかります。
+
+![s113](images/s113.png)
+
+# まとめ
+無料で簡単にFunctions環境を作成することができました。
+サクッと試す場合にはオススメですよ！
+
+システム化のご検討やご相談は弊社までお問い合わせください。  
+https://i-enter.co.jp/contact/
